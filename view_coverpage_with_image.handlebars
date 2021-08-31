@@ -1,47 +1,70 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Fax</title>
-		<style>
-			body {width:95%;margin:0 auto}
-			h1 {width:100%;color:#fff;background-color:#000;padding:0.2em 0.2em 0.2em 1.2em}
-			.bodyWrap {padding-left:1em}
-			.contactHeading {font-weight:bold;}
-			.itemLabel {font-weight:bold;}
-			.logo {width:380px;height:33px;}
-		</style>
-	</head>
-	<body>
-		<div><img class="logo" src="https://raw.githubusercontent.com/grokify/ringcentral-demos-fax-cover-page/master/images/ringcentral-logo-380x33.png" /></div>
-		<h1>FAX with Image</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fax</title>
+    <style>
+      body { width:95%; margin:0 auto } h1 { padding: 0em 0em 0em 0em;
+      color:#fff;background-color:#000;} .bodyWrap { padding-left:0em }
+      .contactHeading { font-weight:bold; padding-left: 2em; } .itemLabel {
+      font-weight:bold; }
+    </style>
+  </head>
+  <body>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <div>
+        <img
+          class="logo"
+          style="width:50px; height:50px;"
+          src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/300Logo.png?format=500w"
+        />
+      </div>
+      <div style="display: inline-block; width: 50%; ">
+        <h1>FAX COVER SHEET </h1>
+        <h1 style="color:black; backgroud:white">
+          FAX COVER SHEET @#$@#$@#$@#$@#$
+        </h1>
+      </div>
+    </div>
 
-		<div class="bodyWrap">
-			<blockquote>
-				<p><span class="itemLabel">Date:</span> {{ fax_date }}</p>
-				<p><span class="itemLabel">Pages including cover sheet:</span> {{ fax_pages }}</p>
-			</blockquote>
+    <div class="top">
+      <div class="top-element">
+        <h2 class="contactHeading">From</h2>
+        <blockquote>
+          <p><span class="itemLabel">Name:</span> {{fax_from_name}}</p>
 
-			<hr />
-			<h2 class="contactHeading">To</h2>
-			<blockquote>
-				<p><span class="itemLabel">Name:</span> {{ fax_to_name }}</p>
-				<p><span class="itemLabel">Phone:</span> {{ fax_to_phone }}</p>
-				<p><span class="itemLabel">Fax Number:</span> {{ fax_to_fax }}</p>
-			</blockquote>
+          <p><span class="itemLabel">Phone:</span> {{fax_from_phone}}</p>
+          <p><span class="itemLabel">Fax Number:</span> {{fax_from_fax}}</p>
+        </blockquote>
+      </div>
+      <div class="top-element">
+        <h2 class="contactHeading">To</h2>
+        <blockquote>
+          <p><span class="itemLabel">Name:</span> {{fax_to_name}}</p>
 
-			<hr />
-			<h2 class="contactHeading">From</h2>
-			<blockquote>
-				<p><span class="itemLabel">Name:</span> {{ fax_from_name }}</p>
-				<p><span class="itemLabel">Phone:</span> {{ fax_from_phone }}</p>
-				<p><span class="itemLabel">Fax Number:</span> {{ fax_from_fax }}</p>
-			</blockquote>
+          <p><span class="itemLabel">Phone:</span> {{fax_to_phone}}</p>
+          <p><span class="itemLabel">Fax Number:</span> {{fax_to_fax}}</p>
+        </blockquote>
+      </div>
+    </div>
 
-			<hr />
-			<h2 class="contactHeading">Note</h2>
+    <div class="bodyWrap">
+      <blockquote>
+        <p><span class="itemLabel">Date:</span> {{fax_date}}</p>
+        <p><span class="itemLabel">Pages including cover sheet:</span>
+          {{fax_pages}}</p>
+      </blockquote>
 
-			{{ fax_coverpage_text }}
-		</div>
-	</body>
+      <hr />
+      <h2 class="contactHeading">Note</h2>
+
+      {{fax_coverpage_text}}
+
+    </div>
+    <br /><br />
+    {{notice_text}}
+    <br />
+    {{notice_text2}}
+  </body>
 </html>

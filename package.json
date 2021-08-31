@@ -6,11 +6,11 @@
   "dependencies": {
     "form-data": "^0.2.0",
     "handlebars": "^4.0.5",
+    "html-pdf": "^3.0.1",
     "ringcentral": "^2.0.6"
   },
   "devDependencies": {},
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grokify/ringcentral-demos-fax-cover-page.git"
